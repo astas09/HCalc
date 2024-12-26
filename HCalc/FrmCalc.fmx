@@ -1,0 +1,482 @@
+object FormCalc: TFormCalc
+  Left = 0
+  Top = 0
+  Caption = 'SimCalc'
+  ClientHeight = 554
+  ClientWidth = 383
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnKeyDown = FormKeyDown
+  OnShow = FormShow
+  DesignerMasterStyle = 3
+  object pnText: TPanel
+    Align = Top
+    Size.Width = 383.000000000000000000
+    Size.Height = 70.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object txtMonitor: TLabel
+      Align = Client
+      StyledSettings = [FontColor]
+      Size.Width = 383.000000000000000000
+      Size.Height = 70.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Family = 'Verdana'
+      TextSettings.Font.Size = 72.000000000000000000
+      TextSettings.HorzAlign = Trailing
+      Text = '0'
+      TabOrder = 2
+    end
+  end
+  object pnHistory: TPanel
+    Align = Top
+    Position.Y = 70.000000000000000000
+    Size.Width = 383.000000000000000000
+    Size.Height = 72.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object lblHistory: TLabel
+      Align = Top
+      Position.Y = 23.000000000000000000
+      Size.Width = 383.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.HorzAlign = Trailing
+      TabOrder = 1
+    end
+    object lblMemory: TLabel
+      Align = Top
+      Size.Width = 383.000000000000000000
+      Size.Height = 23.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+    end
+  end
+  object pnButtons: TPanel
+    Align = Client
+    Size.Width = 383.000000000000000000
+    Size.Height = 412.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    object pnButtonsGrid: TGridPanelLayout
+      Align = Client
+      Locked = True
+      Size.Width = 383.000000000000000000
+      Size.Height = 412.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      ColumnCollection = <
+        item
+          Value = 25.000000000000000000
+        end
+        item
+          Value = 25.000000000000030000
+        end
+        item
+          Value = 24.999999999999990000
+        end
+        item
+          Value = 24.999999999999980000
+        end>
+      ControlCollection = <
+        item
+          Column = 0
+          Control = btnMem
+          Row = 0
+        end
+        item
+          Column = 1
+          Control = btnMPlus
+          Row = 0
+        end
+        item
+          Column = 2
+          Control = btnMMinus
+          Row = 0
+        end
+        item
+          Column = 3
+          Control = btnClear
+          Row = 0
+        end
+        item
+          Column = 0
+          Control = btn07
+          Row = 1
+        end
+        item
+          Column = 1
+          Control = btn08
+          Row = 1
+        end
+        item
+          Column = 2
+          Control = btn09
+          Row = 1
+        end
+        item
+          Column = 3
+          Control = btnPlus
+          Row = 1
+        end
+        item
+          Column = 0
+          Control = btn04
+          Row = 2
+        end
+        item
+          Column = 1
+          Control = btn05
+          Row = 2
+        end
+        item
+          Column = 2
+          Control = btn06
+          Row = 2
+        end
+        item
+          Column = 3
+          Control = btnMinus
+          Row = 2
+        end
+        item
+          Column = 0
+          Control = btn01
+          Row = 3
+        end
+        item
+          Column = 1
+          Control = btn02
+          Row = 3
+        end
+        item
+          Column = 2
+          Control = btn03
+          Row = 3
+        end
+        item
+          Column = 3
+          Control = btnMult
+          Row = 3
+        end
+        item
+          Column = 0
+          Control = btn00
+          Row = 4
+        end
+        item
+          Column = 1
+          Control = btnPoint
+          Row = 4
+        end
+        item
+          Column = 2
+          Control = btnEqual
+          Row = 4
+        end
+        item
+          Column = 3
+          Control = btnDiv
+          Row = 4
+        end>
+      RowCollection = <
+        item
+          Value = 20.000000000000020000
+        end
+        item
+          Value = 20.000000000000080000
+        end
+        item
+          Value = 19.999999999999990000
+        end
+        item
+          Value = 19.999999999999940000
+        end
+        item
+          Value = 19.999999999999970000
+        end>
+      object btn07: TButton
+        Align = Client
+        DisableFocusEffect = True
+        StyledSettings = [Family, FontColor]
+        Size.Width = 95.750000000000000000
+        Size.Height = 82.400001525878910000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = '7'
+        TextSettings.Font.Size = 36.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.Trimming = None
+        OnClick = DigitClick
+      end
+      object btn08: TButton
+        Align = Client
+        DisableFocusEffect = True
+        StyledSettings = [Family, FontColor]
+        Size.Width = 95.750000000000000000
+        Size.Height = 82.400001525878910000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Text = '8'
+        TextSettings.Font.Size = 36.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.Trimming = None
+        OnClick = DigitClick
+      end
+      object btn09: TButton
+        Align = Client
+        DisableFocusEffect = True
+        StyledSettings = [Family, FontColor]
+        Size.Width = 95.750000000000000000
+        Size.Height = 82.400001525878910000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        Text = '9'
+        TextSettings.Font.Size = 36.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.Trimming = None
+        OnClick = DigitClick
+      end
+      object btnPlus: TButton
+        Align = Client
+        DisableFocusEffect = True
+        StyledSettings = [Family, FontColor]
+        Size.Width = 95.750000000000000000
+        Size.Height = 82.400001525878910000
+        Size.PlatformDefault = False
+        TabOrder = 4
+        Text = '+'
+        TextSettings.Font.Size = 36.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.Trimming = None
+        OnClick = OperClick
+      end
+      object btn04: TButton
+        Align = Client
+        DisableFocusEffect = True
+        StyledSettings = [Family, FontColor]
+        Size.Width = 95.750000000000000000
+        Size.Height = 82.400009155273440000
+        Size.PlatformDefault = False
+        TabOrder = 5
+        Text = '4'
+        TextSettings.Font.Size = 36.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.Trimming = None
+        OnClick = DigitClick
+      end
+      object btn05: TButton
+        Align = Client
+        DisableFocusEffect = True
+        StyledSettings = [Family, FontColor]
+        Size.Width = 95.750000000000000000
+        Size.Height = 82.400009155273440000
+        Size.PlatformDefault = False
+        TabOrder = 6
+        Text = '5'
+        TextSettings.Font.Size = 36.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.Trimming = None
+        OnClick = DigitClick
+      end
+      object btn06: TButton
+        Align = Client
+        DisableFocusEffect = True
+        StyledSettings = [Family, FontColor]
+        Size.Width = 95.750000000000000000
+        Size.Height = 82.400009155273440000
+        Size.PlatformDefault = False
+        TabOrder = 7
+        Text = '6'
+        TextSettings.Font.Size = 36.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.Trimming = None
+        OnClick = DigitClick
+      end
+      object btnMinus: TButton
+        Align = Client
+        DisableFocusEffect = True
+        StyledSettings = [Family, FontColor]
+        Size.Width = 95.750000000000000000
+        Size.Height = 82.400009155273440000
+        Size.PlatformDefault = False
+        TabOrder = 8
+        Text = '-'
+        TextSettings.Font.Size = 36.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.Trimming = None
+        OnClick = OperClick
+      end
+      object btn01: TButton
+        Align = Client
+        DisableFocusEffect = True
+        StyledSettings = [Family, FontColor]
+        Size.Width = 95.750000000000000000
+        Size.Height = 82.399993896484380000
+        Size.PlatformDefault = False
+        TabOrder = 9
+        Text = '1'
+        TextSettings.Font.Size = 36.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.Trimming = None
+        OnClick = DigitClick
+      end
+      object btn02: TButton
+        Align = Client
+        DisableFocusEffect = True
+        StyledSettings = [Family, FontColor]
+        Size.Width = 95.750000000000000000
+        Size.Height = 82.399993896484380000
+        Size.PlatformDefault = False
+        TabOrder = 10
+        Text = '2'
+        TextSettings.Font.Size = 36.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.Trimming = None
+        OnClick = DigitClick
+      end
+      object btn03: TButton
+        Align = Client
+        DisableFocusEffect = True
+        StyledSettings = [Family, FontColor]
+        Size.Width = 95.750000000000000000
+        Size.Height = 82.399993896484380000
+        Size.PlatformDefault = False
+        TabOrder = 11
+        Text = '3'
+        TextSettings.Font.Size = 36.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.Trimming = None
+        OnClick = DigitClick
+      end
+      object btnMult: TButton
+        Align = Client
+        DisableFocusEffect = True
+        StyledSettings = [Family, FontColor]
+        Size.Width = 95.750000000000000000
+        Size.Height = 82.399993896484380000
+        Size.PlatformDefault = False
+        TabOrder = 12
+        Text = '*'
+        TextSettings.Font.Size = 36.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.Trimming = None
+        OnClick = OperClick
+      end
+      object btn00: TButton
+        Align = Client
+        DisableFocusEffect = True
+        StyledSettings = [Family, FontColor]
+        Size.Width = 95.750000000000000000
+        Size.Height = 82.400024414062500000
+        Size.PlatformDefault = False
+        TabOrder = 16
+        Text = '0'
+        TextSettings.Font.Size = 36.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.Trimming = None
+        OnClick = DigitClick
+      end
+      object btnPoint: TButton
+        Align = Client
+        DisableFocusEffect = True
+        StyledSettings = [Family, FontColor]
+        Size.Width = 95.750000000000000000
+        Size.Height = 82.400024414062500000
+        Size.PlatformDefault = False
+        TabOrder = 17
+        Text = '.'
+        TextSettings.Font.Size = 36.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.Trimming = None
+        OnClick = btnPointClick
+      end
+      object btnEqual: TButton
+        Align = Client
+        DisableFocusEffect = True
+        StyledSettings = [Family, FontColor]
+        Size.Width = 95.750000000000000000
+        Size.Height = 82.400024414062500000
+        Size.PlatformDefault = False
+        TabOrder = 18
+        Text = '='
+        TextSettings.Font.Size = 36.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.Trimming = None
+        OnClick = btnEqualClick
+      end
+      object btnDiv: TButton
+        Align = Client
+        DisableFocusEffect = True
+        StyledSettings = [Family, FontColor]
+        Size.Width = 95.750000000000000000
+        Size.Height = 82.400024414062500000
+        Size.PlatformDefault = False
+        TabOrder = 19
+        Text = '/'
+        TextSettings.Font.Size = 36.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.Trimming = None
+        OnClick = OperClick
+      end
+      object btnMem: TButton
+        Align = Client
+        DisableFocusEffect = True
+        StyledSettings = [Family, FontColor]
+        Size.Width = 95.750000000000000000
+        Size.Height = 82.400001525878910000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'M'
+        TextSettings.Font.Size = 36.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.Trimming = None
+        OnClick = btnMemClick
+      end
+      object btnMPlus: TButton
+        Align = Client
+        DisableFocusEffect = True
+        StyledSettings = [Family, FontColor]
+        Size.Width = 95.750000000000000000
+        Size.Height = 82.400001525878910000
+        Size.PlatformDefault = False
+        TabOrder = 15
+        Text = 'M+'
+        TextSettings.Font.Size = 36.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.Trimming = None
+        OnClick = btnMemClick
+      end
+      object btnMMinus: TButton
+        Align = Client
+        DisableFocusEffect = True
+        StyledSettings = [Family, FontColor]
+        Size.Width = 95.750000000000000000
+        Size.Height = 82.400001525878910000
+        Size.PlatformDefault = False
+        TabOrder = 14
+        Text = 'M-'
+        TextSettings.Font.Size = 36.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.Trimming = None
+        OnClick = btnMemClick
+      end
+      object btnClear: TButton
+        Align = Client
+        DisableFocusEffect = True
+        StyledSettings = [Family, FontColor]
+        Size.Width = 95.750000000000000000
+        Size.Height = 82.400001525878910000
+        Size.PlatformDefault = False
+        TabOrder = 13
+        Text = 'C'
+        TextSettings.Font.Size = 36.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.Trimming = None
+        OnClick = btnClearClick
+      end
+    end
+  end
+end
