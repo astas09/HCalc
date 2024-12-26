@@ -1,4 +1,6 @@
 *.~*
+*.deployproj
+AndroidManifest*.xml
 /HCalc/Win32/
 /HCalc/Android/
 /HCalc/__history/
