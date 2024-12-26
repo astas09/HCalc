@@ -163,9 +163,20 @@ begin
 end;
 
 procedure TFormCalc.UpdateUI(strText: string; strHistory: string; dMemory: double);
+var iFontSize: integer;
 begin
+  iFontSize := 72;
+  if length(strText) > 8 then iFontSize := 36;
+  if txtMonitor.Font.Size <> iFontSize then
+  txtMonitor.Font.Size := iFontSize;
   txtMonitor.Text := strText;
+
+  iFontSize := 16;
+  if length(strHistory) > 80 then iFontSize := 10;
+  if lblHistory.Font.Size <> iFontSize then
+  lblHistory.Font.Size := iFontSize;
   lblHistory.Text := strHistory;
+
   if trunc(abs(dMemory)) = 0 then
     lblMemory.Text := ''
   else

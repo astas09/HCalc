@@ -39,11 +39,16 @@ object FormCalc: TFormCalc
     TabOrder = 2
     object lblHistory: TLabel
       Align = Top
+      StyledSettings = [Family, Style, FontColor]
       Position.Y = 23.000000000000000000
       Size.Width = 383.000000000000000000
       Size.Height = 50.000000000000000000
       Size.PlatformDefault = False
+      TextSettings.Font.Size = 16.000000000000000000
       TextSettings.HorzAlign = Trailing
+      Text = 
+        '1234567890123456789012345678901234567890 1234567890 1234567890 1' +
+        '234567890 1234567890'
       TabOrder = 1
     end
     object lblMemory: TLabel

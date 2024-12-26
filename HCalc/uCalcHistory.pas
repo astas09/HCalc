@@ -66,7 +66,6 @@ begin
   end;
 end;
 
-
 procedure TCalcHistory.Clear();
 begin
   SetLength(FArrHist, 0);
